@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="manifest" href="manifest.json" />
+	</head>
+
+	<body>
+		<p>Hello World</p>
+
+		<button onclick="notifyMe()">Notify Me</button>
+	</body>
+
+	<script>
+		function notifyMe() {
+			if (Notification.permission == "default") {
+				Notification.requestPermission()
+			}
+
+			setTimeout(sendNotification, 2000)
+		}
+
+		function sendNotification() {
+			const message = `Hello, the time is ${Date.now()}`
+			var notif = new Notification(message, )
+		}
+
+	</script>
+</html>
